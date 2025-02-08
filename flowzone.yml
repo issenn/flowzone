@@ -2896,12 +2896,12 @@ jobs:
 
       - name: Generate SBOM
         run: |
-          npx @cyclonedx/cyclonedx-npm --output-file=${{ runner.temp }}/npm-sbom.xml
+          npx @cyclonedx/cyclonedx-npm --output-file=${{ runner.temp }}/npm-sbom.json
 
       - <<: *publishSBOMArtifacts
         with:
           name: gh-release-sbom-npm
-          path: ${{ runner.temp }}/npm-sbom.xml
+          path: ${{ runner.temp }}/npm-sbom.json
           retention-days: 90
 
       - <<: *publishSBOMToDependencyTrack

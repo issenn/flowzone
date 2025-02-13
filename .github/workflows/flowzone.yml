@@ -503,7 +503,7 @@ jobs:
         with:
           result-encoding: json
           script: |
-            const { runBalenaVersionist } = require('balena-versionist');
+            const { runBalenaVersionist } = require('@issenn/balena-versionist');
 
             let version;
             try {

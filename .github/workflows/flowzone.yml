@@ -480,7 +480,7 @@ jobs:
         if: inputs.disable_versioning != true
         run: |
           npm install -g \
-            @issenn/balena-versionist@~0.15.1-build-dev \
+            @issenn/balena-versionist@build-dev \
             versionist@^7.0.3
 
           npm ls -g
